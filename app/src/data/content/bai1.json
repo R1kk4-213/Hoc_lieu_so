@@ -45,13 +45,7 @@
     },
     {
       "kind": "true-false",
-      "prompt": "Đúng hay Sai? Trả lời 6 mệnh đề sau, với ",
-      "bullets": [
-        "A là tập hợp các nhân vật phim Conan.",
-        "B là tập hợp các nhân vật phim Doraemon.",
-        "C là tập hợp các nhân vật nữ.",
-        "D là tập hợp nhân vật đeo kính."
-      ],
+      "prompt": "Đúng hay Sai? Trả lời 6 mệnh đề sau.",
       "statements": [
         { "id": "s1", "text": "Jennie là phần tử của tập hợp A.", "answer": false, "explain": "Sai — Jennie không phải nhân vật trong phim Conan." },
 { "id": "s2", "text": "Ran không là phần tử của tập hợp B.", "answer": true, "explain": "Đúng — Ran có trong phim Conan, không có trong Doraemon." },
@@ -65,7 +59,7 @@
       "kind": "free-answer",
       "prompt": "Hãy mô tả tập hợp D (nhân vật đeo kính) bằng cách liệt kê các phần tử.",
       "fields": [
-        { "key": "D", "label": "D = { … }", "answers": [["Conan", "Nobita"]]}
+        { "key": "D", "label": "D = { … }", "answers": [["Conan", "Nobita"]], "placeholder": "vd: Conan, Nobita" }
       ]
     },
     {
