@@ -1,0 +1,27 @@
+{
+  "id": "bai7",
+  "number": "Bài 7",
+  "title": "Đếm phần tử của hợp 2 tập hợp",
+  "steps": [
+    {
+      "kind": "intro",
+      "title": "Bài toán vận dụng",
+      "body": "Lớp 10A có 24 bạn tham gia thi đấu bóng đá và cầu lông, trong đó có 16 bạn thi đấu bóng đá và 11 bạn thi đấu cầu lông. Giả sử các trận bóng đá và cầu lông không tổ chức đồng thời. Hỏi có bao nhiêu bạn lớp 10A tham gia thi đấu cả bóng đá và cầu lông?"
+    },
+    {
+      "kind": "word-problem",
+      "prompt": "Hãy tính số bạn tham gia cả hai môn.",
+      "setup": "Gọi x là số bạn tham gia cả bóng đá và cầu lông. Khi đó: số chỉ tham gia bóng đá là (16 − x), số chỉ tham gia cầu lông là (11 − x). Tổng số bạn là 24.",
+      "answer": 3,
+      "unit": "bạn",
+      "solution": "Ta có (16 − x) + (11 − x) + x = 24 ⇔ 27 − x = 24 ⇔ x = 3. Vậy có 3 bạn lớp 10A tham gia cả bóng đá và cầu lông."
+    },
+    {
+      "kind": "theory",
+      "title": "Công thức đếm",
+      "body": "Với hai tập hợp hữu hạn A và B bất kì, số phần tử của A ∪ B được tính như sau:",
+      "formula": "n(A ∪ B) = n(A) + n(B) − n(A ∩ B)",
+      "note": "Ý nghĩa: nếu cộng n(A) và n(B) thì phần giao bị đếm 2 lần, nên phải trừ đi một lần n(A ∩ B)."
+    }
+  ]
+}

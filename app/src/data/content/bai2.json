@@ -1,0 +1,42 @@
+{
+  "id": "bai2",
+  "number": "Bài 2",
+  "title": "Tập hợp con",
+  "steps": [
+    {
+      "kind": "intro",
+      "title": "Khởi động",
+      "body": "Cho tập hợp S = { 0; 2; 3; 5 } và ba tập con dự kiến: S₁ = { 0; 2 }, S₂ = { 3 }, S₃ = { 1; 3 }. Hãy đánh giá Đúng/Sai từng mệnh đề bên dưới."
+    },
+    {
+      "kind": "true-false",
+      "prompt": "Đúng hay Sai?",
+      "statements": [
+        { "id": "s1", "text": "Tất cả phần tử của S₁ đều là phần tử của S.", "answer": true, "explain": "Đúng — 0 và 2 đều thuộc S." },
+        { "id": "s2", "text": "Tất cả phần tử của S₂ đều là phần tử của S.", "answer": true, "explain": "Đúng — 3 thuộc S." },
+        { "id": "s3", "text": "Tất cả phần tử của S₃ đều là phần tử của S.", "answer": false, "explain": "Sai — vì 1 ∉ S nên S₃ không là tập con của S." }
+      ]
+    },
+    {
+      "kind": "theory",
+      "title": "Lý thuyết — Tập hợp con",
+      "body": "Nếu mọi phần tử của tập hợp T đều là phần tử của tập hợp S thì ta nói T là một tập hợp con (hay tập con) của S và viết T ⊂ S (đọc là T chứa trong S hoặc T là tập con của S).",
+      "bullets": [
+        "Thay cho T ⊂ S, ta còn viết S ⊃ T (đọc là S chứa T).",
+        "Kí hiệu T ⊄ S để chỉ T không là tập con của S.",
+        "Quy ước: tập rỗng là tập con của mọi tập hợp.",
+        "Người ta thường minh hoạ một tập hợp bằng biểu đồ Ven."
+      ]
+    },
+    {
+      "kind": "multi-tick",
+      "prompt": "Cho tập hợp S = { 2; 3; 5 }. Trong các tập hợp sau, đâu là tập con của S? (chọn tất cả)",
+      "options": [
+        { "id": "o1", "text": "S₁ = { 3 }", "correct": true },
+        { "id": "o2", "text": "S₂ = { 0; 2 }", "correct": false },
+        { "id": "o3", "text": "S₃ = { 3; 5 }", "correct": true }
+      ],
+      "explanation": "S₁ và S₃ chỉ gồm các phần tử có trong S nên là tập con. S₂ chứa 0 ∉ S nên không phải tập con."
+    }
+  ]
+}

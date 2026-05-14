@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+dist-ssr/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# Local env
+*.local
+.env
+.env.local
+
+# Misc
+*.zip
+*.pdf
+/spec.md
+/index.html

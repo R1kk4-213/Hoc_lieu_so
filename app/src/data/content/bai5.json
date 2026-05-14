@@ -1,0 +1,43 @@
+{
+  "id": "bai5",
+  "number": "Bài 5",
+  "title": "Các tập con thường dùng của ℝ",
+  "steps": [
+    {
+      "kind": "intro",
+      "title": "Khởi động — HĐ6",
+      "body": "Cho hai tập hợp C = { x ∈ ℝ | x ≥ 3 } và D = { x ∈ ℝ | x > 3 }. Đánh giá Đúng/Sai từng mệnh đề."
+    },
+    {
+      "kind": "true-false",
+      "prompt": "Đúng / Sai?",
+      "statements": [
+        { "id": "a", "text": "C, D là các tập con của ℝ.", "answer": true },
+        { "id": "b", "text": "∀x, x ∈ C ⇒ x ∈ D.", "answer": false, "explain": "Sai — x = 3 thuộc C nhưng không thuộc D." },
+        { "id": "c", "text": "3 ∈ C nhưng 3 ∉ D.", "answer": true, "explain": "Đúng — C chứa cả mốc 3, D không chứa." },
+        { "id": "d", "text": "C = D.", "answer": false, "explain": "Sai — hai tập khác nhau ở điểm 3." }
+      ]
+    },
+    {
+      "kind": "theory",
+      "title": "Lý thuyết — Khoảng, đoạn, nửa khoảng",
+      "body": "Một số tập con thường dùng của ℝ:",
+      "bullets": [
+        "Khoảng: (a; b) = { x ∈ ℝ | a < x < b }; (a; +∞) = { x ∈ ℝ | x > a }; (−∞; b) = { x ∈ ℝ | x < b }; (−∞; +∞) = ℝ.",
+        "Đoạn: [a; b] = { x ∈ ℝ | a ≤ x ≤ b }.",
+        "Nửa khoảng: [a; b) = { x | a ≤ x < b }; (a; b] = { x | a < x ≤ b }; [a; +∞) = { x | x ≥ a }; (−∞; b] = { x | x ≤ b }.",
+        "−∞ đọc là âm vô cực; +∞ đọc là dương vô cực. a, b gọi là các đầu mút của đoạn / khoảng / nửa khoảng."
+      ]
+    },
+    {
+      "kind": "interval-match",
+      "prompt": "Viết tập hợp sau dưới dạng kí hiệu khoảng / đoạn / nửa khoảng. (vd: (2;5), [-1;3], (-∞;4], [0;+∞))",
+      "rows": [
+        { "id": "r1", "description": "{ x ∈ ℝ | 2 < x < 5 }", "answers": ["(2;5)", "(2; 5)"] },
+        { "id": "r2", "description": "{ x ∈ ℝ | −1 ≤ x ≤ 3 }", "answers": ["[-1;3]", "[-1; 3]"] },
+        { "id": "r3", "description": "{ x ∈ ℝ | x ≥ 3 }", "answers": ["[3;+∞)", "[3; +∞)", "[3;+vc)"] },
+        { "id": "r4", "description": "{ x ∈ ℝ | x < 4 }", "answers": ["(-∞;4)", "(-vc;4)", "(-∞; 4)"] }
+      ]
+    }
+  ]
+}

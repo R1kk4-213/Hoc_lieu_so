@@ -1,0 +1,47 @@
+{
+  "id": "bai4",
+  "number": "Bài 4",
+  "title": "Các tập hợp số",
+  "steps": [
+    {
+      "kind": "theory",
+      "title": "Các tập hợp số quen thuộc",
+      "body": "Ta đã biết các tập hợp số sau:",
+      "bullets": [
+        "Tập hợp các số tự nhiên ℕ = { 0; 1; 2; 3; … }.",
+        "Tập hợp các số nguyên ℤ = { …; −3; −2; −1; 0; 1; 2; 3; … } gồm các số tự nhiên và các số nguyên âm.",
+        "Tập hợp các số hữu tỉ ℚ gồm các số viết được dưới dạng phân số a/b, với a, b ∈ ℤ và b ≠ 0. Số hữu tỉ biểu diễn được dưới dạng số thập phân hữu hạn hoặc vô hạn tuần hoàn.",
+        "Tập hợp các số thực ℝ gồm các số hữu tỉ và các số vô tỉ."
+      ]
+    },
+    {
+      "kind": "true-false",
+      "prompt": "Các mệnh đề sau đúng hay sai?",
+      "statements": [
+        { "id": "a", "text": "Mọi số nguyên đều viết được dưới dạng phân số.", "answer": true, "explain": "Đúng — n = n/1 với mọi n nguyên." },
+        { "id": "b", "text": "Tập hợp các số thực chứa tập hợp các số hữu tỉ.", "answer": true, "explain": "Đúng — ℚ ⊂ ℝ." },
+        { "id": "c", "text": "Tồn tại một số thực không là số hữu tỉ.", "answer": true, "explain": "Đúng — ví dụ √2, π là số vô tỉ." }
+      ]
+    },
+    {
+      "kind": "theory",
+      "title": "Mối quan hệ giữa các tập hợp số",
+      "body": "Từ những điều trên, ta có chuỗi bao hàm:",
+      "formula": "ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ"
+    },
+    {
+      "kind": "intro",
+      "title": "Luyện tập 3",
+      "body": "Cho tập hợp C = { −4; 0; 1; 2 }. Các mệnh đề sau đúng hay sai?"
+    },
+    {
+      "kind": "true-false",
+      "prompt": "Đúng / Sai?",
+      "statements": [
+        { "id": "a", "text": "C là tập con của ℤ.", "answer": true, "explain": "Đúng — tất cả phần tử của C đều là số nguyên." },
+        { "id": "b", "text": "C là tập con của ℕ.", "answer": false, "explain": "Sai — −4 ∉ ℕ." },
+        { "id": "c", "text": "C là tập con của ℝ.", "answer": true, "explain": "Đúng — ℤ ⊂ ℝ." }
+      ]
+    }
+  ]
+}

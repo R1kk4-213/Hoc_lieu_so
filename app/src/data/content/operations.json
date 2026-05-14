@@ -1,0 +1,129 @@
+{
+  "maxHintsPerLevel": 2,
+  "maxMistakesPerLevel": 3,
+  "levels": [
+    {
+      "id": 1,
+      "title": "Phép giao",
+      "topic": "Mạng xã hội",
+      "scenario": "Hãy kéo từng ứng dụng vào đúng vùng trên Sơ đồ Venn (chỉ Nhắn tin/Gọi điện, chỉ Xem video ngắn, hay làm được cả hai).",
+      "labelA": "Nhắn tin / Gọi điện",
+      "labelB": "Xem Video ngắn",
+      "effect": "intersect",
+      "popupTitle": "Bạn vừa khám phá ra Phép Giao!",
+      "popupText": "Facebook và Instagram làm được CẢ HAI việc. Vùng chung này chính là Phép Giao A ∩ B.",
+      "definition": {
+        "body": "Tập hợp gồm các phần tử thuộc CẢ HAI tập hợp S và T gọi là giao của hai tập hợp S và T, kí hiệu S ∩ T.",
+        "formula": "S ∩ T = { x | x ∈ S và x ∈ T }",
+        "setNames": ["S", "T"],
+        "image": "/images/venn-intersect.png",
+        "imageCaption": "S ∩ T"
+      },
+      "items": [
+        { "id": "c1", "text": "💬 Messenger", "target": "A", "hint": "Cái này gọi điện tốt, lướt video ngắn thì chưa chuyên." },
+        { "id": "c2", "text": "📱 Zalo", "target": "A", "hint": "Zalo nhắn tin vô địch, video ngắn hơi ít." },
+        { "id": "c3", "text": "🎵 TikTok", "target": "B", "hint": "TikTok đâu có dùng để gọi video cho người yêu được?" },
+        { "id": "c4", "text": "▶️ YouTube Shorts", "target": "B", "hint": "YouTube Shorts để xem giải trí thôi nhé." },
+        { "id": "c5", "text": "🌐 Facebook", "target": "AB", "hint": "Facebook vừa chat (qua Messenger), vừa có Reels đấy!" },
+        { "id": "c6", "text": "📸 Instagram", "target": "AB", "hint": "Instagram có Direct Message và cả Reels luôn đó." }
+      ],
+      "discovery": {
+        "prompt": "Từ bài làm, ứng dụng nào vừa có thể gọi điện / nhắn tin, vừa có thể xem video ngắn? Hãy liệt kê ra.",
+        "fieldLabel": "Đáp án của bạn",
+        "placeholder": "vd: Facebook, Instagram",
+        "answers": [["Facebook", "Instagram"]],
+        "revealNote": "Gợi ý: đây chính là những thẻ bạn đặt ở vùng giữa (A ∩ B)."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Phép hợp",
+      "topic": "Quầy pha chế trà sữa",
+      "scenario": "Phân loại các món thức uống của quán: chỉ Trà sữa, chỉ có Trân châu, hay vừa là Trà sữa vừa có Trân châu.",
+      "labelA": "Trà sữa",
+      "labelB": "Có Trân châu",
+      "effect": "union",
+      "popupTitle": "Hoàn hảo! Đây là Phép Hợp!",
+      "popupText": "Toàn bộ menu là những món Trà sữa HOẶC có trân châu. Lấy tất cả, không sót, không trùng — đó chính là A ∪ B.",
+      "definition": {
+        "body": "Tập hợp gồm các phần tử thuộc tập hợp S HOẶC T (hoặc cả hai) gọi là hợp của hai tập hợp S và T, kí hiệu S ∪ T.",
+        "formula": "S ∪ T = { x | x ∈ S hoặc x ∈ T }",
+        "setNames": ["S", "T"],
+        "image": "/images/venn-union.png",
+        "imageCaption": "S ∪ T"
+      },
+      "items": [
+        { "id": "c7", "text": "🍵 Trà sữa Ô Long", "target": "A", "hint": "Trà sữa nhưng chưa có topping trân châu nhé." },
+        { "id": "c8", "text": "🍃 Trà sữa Matcha", "target": "A", "hint": "Họ Trà sữa, nhưng không có hạt trân châu." },
+        { "id": "c9", "text": "🧋 Trà sữa Trân châu đen", "target": "AB", "hint": "Vừa là Trà sữa, vừa có Trân châu — chắc chắn nằm giữa." },
+        { "id": "c10", "text": "🥛 Sữa tươi Trân châu đường đen", "target": "B", "hint": "Sữa tươi không phải Trà sữa, nhưng CÓ trân châu." },
+        { "id": "c11", "text": "🍨 Chè Thái có Trân châu", "target": "B", "hint": "Chè Thái thỉnh thoảng có trân châu, nhưng cốt không phải trà sữa." }
+      ],
+      "discovery": {
+        "prompt": "Từ bài làm, Menu nước của quán gồm những món nào? Hãy liệt kê tất cả.",
+        "fieldLabel": "Liệt kê toàn bộ menu",
+        "placeholder": "vd: Trà sữa Ô Long, Trà sữa Matcha, …",
+        "answers": [["Trà sữa Ô Long", "Trà sữa Matcha", "Trà sữa Trân châu đen", "Sữa tươi Trân châu đường đen", "Chè Thái có Trân châu"]],
+        "revealNote": "Gợi ý: Menu là HỢP của Trà sữa và món Có trân châu — gồm tất cả các thẻ."
+      }
+    },
+    {
+      "id": 3,
+      "title": "Phép hiệu",
+      "topic": "Soạn đồ ra khỏi nhà",
+      "scenario": "Phân loại đồ dùng: chỉ mang đi học, chỉ đi dã ngoại, hay dùng được cho cả hai.",
+      "labelA": "Đồ đi học",
+      "labelB": "Đồ dã ngoại",
+      "effect": "difference",
+      "popupTitle": "Tuyệt vời! Phép Hiệu lộ diện!",
+      "popupText": "Phần tử thuộc A nhưng KHÔNG thuộc B chính là Phép Hiệu A \\ B. Vùng B đã được làm mờ để bạn dễ hình dung.",
+      "definition": {
+        "body": "Tập hợp gồm các phần tử thuộc tập hợp S nhưng KHÔNG thuộc tập hợp T gọi là hiệu của hai tập hợp S và T, kí hiệu S \\ T.",
+        "formula": "S \\ T = { x | x ∈ S và x ∉ T }",
+        "setNames": ["S", "T"],
+        "image": "/images/venn-difference.png",
+        "imageCaption": "S \\ T"
+      },
+      "items": [
+        { "id": "c12", "text": "📚 Sách giáo khoa", "target": "A", "hint": "Đi dã ngoại mang sách Toán làm gì?" },
+        { "id": "c13", "text": "🔢 Máy tính Casio", "target": "A", "hint": "Đi dã ngoại bạn định giải phương trình hả?" },
+        { "id": "c14", "text": "🎒 Balo", "target": "AB", "hint": "Đi học hay dã ngoại đều cần balo để đựng đồ." },
+        { "id": "c15", "text": "💧 Bình nước", "target": "AB", "hint": "Lúc nào cũng cần uống nước, đi đâu cũng mang." },
+        { "id": "c16", "text": "🏕️ Lều trại", "target": "B", "hint": "Mang lều đến trường cắm trại giữa sân trường à?" },
+        { "id": "c17", "text": "📷 Máy ảnh", "target": "B", "hint": "Đi dã ngoại chụp ảnh hợp lý, lên lớp thầy cô thu đấy." }
+      ],
+      "discovery": {
+        "prompt": "Từ bài làm, vật dụng nào được mang lên trường (đi học) nhưng KHÔNG mang đi dã ngoại? Hãy liệt kê ra.",
+        "fieldLabel": "Đáp án của bạn",
+        "placeholder": "vd: Sách giáo khoa, Máy tính Casio",
+        "answers": [["Sách giáo khoa", "Máy tính Casio"]],
+        "revealNote": "Gợi ý: đây là các thẻ bạn đặt ở vùng CHỈ THUỘC A (đồ đi học)."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Thử thách toán học",
+      "topic": "Cho D = {1, 2, 3, 4, 5} và E = {3, 4, 5, 6, 7}",
+      "scenario": "Cho hai tập hợp D = {1, 2, 3, 4, 5} và E = {3, 4, 5, 6, 7}. Hãy điền các phần tử của các tập hợp bên dưới.",
+      "labelA": "Tập D",
+      "labelB": "Tập E",
+      "effect": "math",
+      "popupTitle": "Bậc thầy của Tập Hợp!",
+      "popupText": "Quá xuất sắc! Bạn đã tự biểu diễn các phần tử lên Sơ đồ Venn và liệt kê đầy đủ các phép toán.",
+      "definition": {
+        "body": "Tổng kết — các phép toán trên D và E.",
+        "formula": "D ∩ E = {3, 4, 5}     D ∪ E = {1,2,3,4,5,6,7}     D \\ E = {1, 2}     E \\ D = {6, 7}",
+        "setNames": ["D", "E"]
+      },
+      "items": [],
+      "fillIn": {
+        "prompt": "Cho hai tập hợp D = {1, 2, 3, 4, 5} và E = {3, 4, 5, 6, 7}. Hãy liệt kê các phần tử của các tập hợp sau:",
+        "fields": [
+          { "key": "inter", "label": "D ∩ E = ?", "answer": [3, 4, 5] },
+          { "key": "union", "label": "D ∪ E = ?", "answer": [1, 2, 3, 4, 5, 6, 7] },
+          { "key": "dminuse", "label": "D \\ E = ?", "answer": [1, 2] }
+        ]
+      }
+    }
+  ]
+}

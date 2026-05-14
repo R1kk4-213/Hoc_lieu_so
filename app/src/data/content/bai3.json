@@ -1,0 +1,59 @@
+{
+  "id": "bai3",
+  "number": "Bài 3",
+  "title": "Hai tập hợp bằng nhau",
+  "steps": [
+    {
+      "kind": "intro",
+      "title": "Khởi động — HĐ4",
+      "body": "Sơn và Thu cùng viết tập hợp các số chính phương nhỏ hơn 100. Sơn viết: S = { 0; 1; 4; 9; 16; 25; 36; 49; 64; 81 }. Thu viết: T = { n ∈ ℕ | n là số chính phương; n < 100 }. Hỏi bạn nào viết đúng?"
+    },
+    {
+      "kind": "multi-tick",
+      "prompt": "Chọn (tick) bạn viết đúng. (Chọn tất cả những phương án đúng)",
+      "options": [
+        { "id": "son", "text": "Sơn viết đúng", "correct": true },
+        { "id": "thu", "text": "Thu viết đúng", "correct": true }
+      ],
+      "explanation": "Cả hai bạn đều viết đúng — Sơn liệt kê, Thu dùng tính chất đặc trưng. Hai cách biểu diễn cùng một tập hợp."
+    },
+    {
+      "kind": "theory",
+      "title": "Lý thuyết",
+      "body": "Hai tập hợp S và T được gọi là hai tập hợp bằng nhau nếu mỗi phần tử của T cũng là phần tử của tập hợp S và ngược lại. Kí hiệu S = T.",
+      "formula": "Nếu S ⊂ T và T ⊂ S thì S = T."
+    },
+    {
+      "kind": "intro",
+      "title": "Ví dụ 3",
+      "body": "Cho hai tập hợp C = { n ∈ ℕ | n là bội chung của 2 và 3; n < 30 } và D = { n ∈ ℕ | n là bội của 6; n < 30 }. Hãy liệt kê các phần tử của hai tập hợp này để chứng minh C = D."
+    },
+    {
+      "kind": "free-answer",
+      "prompt": "Liệt kê các phần tử.",
+      "fields": [
+        { "key": "C", "label": "C = { … }", "answers": [[0, 6, 12, 18, 24]], "placeholder": "vd: 0, 6, 12, 18, 24" },
+        { "key": "D", "label": "D = { … }", "answers": [[0, 6, 12, 18, 24]], "placeholder": "vd: 0, 6, 12, 18, 24" }
+      ]
+    },
+    {
+      "kind": "theory",
+      "title": "Kết luận",
+      "body": "C và D có cùng các phần tử nên C = D — vì bội chung của 2 và 3 chính là bội của 6."
+    },
+    {
+      "kind": "intro",
+      "title": "Bài tập áp dụng (hình học)",
+      "body": "Giả sử C là tập hợp các hình bình hành có hai đường chéo vuông góc; D là tập hợp các hình vuông. Hãy đánh giá đúng/sai từng mệnh đề bên dưới."
+    },
+    {
+      "kind": "true-false",
+      "prompt": "Đúng / Sai cho từng mệnh đề.",
+      "statements": [
+        { "id": "a", "text": "C ⊂ D", "answer": false, "explain": "Sai — có những hình thoi (hbh có 2 đường chéo vuông góc) không phải hình vuông." },
+        { "id": "b", "text": "C ⊃ D", "answer": true, "explain": "Đúng — mọi hình vuông đều là hình thoi (thuộc C)." },
+        { "id": "c", "text": "C = D", "answer": false, "explain": "Sai — hai tập hợp không có cùng các phần tử." }
+      ]
+    }
+  ]
+}

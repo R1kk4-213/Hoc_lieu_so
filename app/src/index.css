@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-ink-50 text-ink-900 font-sans antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 100% -10%, rgba(71, 99, 255, 0.08), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(255, 155, 28, 0.08), transparent 60%);
+  background-attachment: fixed;
+}
+
+@layer components {
+  .card-surface {
+    @apply bg-white/80 backdrop-blur-xl border border-ink-100 shadow-soft rounded-2xl;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition active:scale-[.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+  .btn-primary {
+    @apply btn bg-ink-900 text-white hover:bg-ink-800 shadow-soft;
+  }
+  .btn-ghost {
+    @apply btn bg-white/70 text-ink-700 border border-ink-200 hover:bg-white;
+  }
+  .btn-accent {
+    @apply btn bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow hover:brightness-110;
+  }
+}
+
+.thin-scroll::-webkit-scrollbar { height: 8px; width: 8px; }
+.thin-scroll::-webkit-scrollbar-thumb { background: rgba(17,20,42,.15); border-radius: 999px; }
+.thin-scroll::-webkit-scrollbar-track { background: transparent; }
