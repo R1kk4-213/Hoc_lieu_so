@@ -951,6 +951,18 @@ function PickSymbolView({
 
 // ── Free answer ───────────────────────────────────────────────────────────────
 
+/** Lowercase + strip Vietnamese diacritics. Numbers pass through as
+ *  number-strings so "4" matches the answer `4`. */
+function normalizeToken(t: string | number): string {
+  const s = String(t).trim();
+  if (/^-?\d+(\.\d+)?$/.test(s)) return s;
+  return s
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .replace(/đ/g, "d")
+    .toLowerCase();
+}
+
 function parseTokens(raw: string): (string | number)[] {
   return raw
     .replace(/[{}\[\]]/g, "")
@@ -959,14 +971,14 @@ function parseTokens(raw: string): (string | number)[] {
     .filter(Boolean)
     .map((t) => {
       const n = Number(t);
-      return Number.isFinite(n) && t !== "" ? n : t.toLowerCase();
+      return Number.isFinite(n) && t !== "" ? n : t;
     });
 }
 
 function sameSet(a: (string | number)[], b: (string | number)[]) {
   if (a.length !== b.length) return false;
-  const sa = [...a].map(String).sort();
-  const sb = [...b].map(String).sort();
+  const sa = a.map(normalizeToken).sort();
+  const sb = b.map(normalizeToken).sort();
   return sa.every((v, i) => v === sb[i]);
 }
 
@@ -987,7 +999,9 @@ function FreeAnswerView({
     for (const f of step.fields) {
       const v = parseTokens(values[f.key] ?? "");
       const ok = f.answers.some((ans) =>
-        f.single ? v.length === 1 && String(v[0]) === String(ans[0]) : sameSet(v, ans),
+        f.single
+          ? v.length === 1 && normalizeToken(v[0]) === normalizeToken(ans[0])
+          : sameSet(v, ans),
       );
       r[f.key] = ok;
       if (!ok) allOk = false;
