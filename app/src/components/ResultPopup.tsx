@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, BookOpen } from "lucide-react";
 import type { Definition } from "../data/gameData";
+import { asset } from "../lib/utils";
 
 type Props = {
   open: boolean;
@@ -61,7 +62,7 @@ export function ResultPopup({
                 {definition.image && (
                   <div className="shrink-0 flex flex-col items-center md:w-44">
                     <img
-                      src={definition.image}
+                      src={asset(definition.image)}
                       alt={definition.imageCaption ?? "Minh hoạ tập hợp"}
                       className="w-full max-w-[180px] h-auto rounded-lg bg-white border border-brand-100 p-2"
                     />

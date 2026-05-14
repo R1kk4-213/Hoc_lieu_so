@@ -29,7 +29,7 @@ import {
 } from "@dnd-kit/core";
 import { LESSONS, type Lesson, type Step } from "../data/lessons";
 import { playSound } from "../lib/audio";
-import { cn } from "../lib/utils";
+import { cn, asset } from "../lib/utils";
 
 type Props = {
   lessonId: keyof typeof LESSONS;
@@ -600,7 +600,7 @@ function BucketBox({
     >
       {image && (
         <div className="aspect-[16/9] bg-ink-50 overflow-hidden relative">
-          <img src={image} alt={label} className="w-full h-full object-cover" />
+          <img src={asset(image)} alt={label} className="w-full h-full object-cover" />
           <div className="absolute inset-x-0 bottom-0 px-2 py-1 bg-gradient-to-t from-black/70 to-transparent text-white text-xs font-bold">
             {label}
           </div>
