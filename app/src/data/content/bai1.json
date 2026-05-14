@@ -1,59 +1,39 @@
-{
-  "id": "bai1",
-  "number": "Bài 1",
-  "title": "Tập hợp",
-  "steps": [
+{ "id": "r4", "left": "Bloom", "right": "A", "answer": 1 },
+        { "id": "r5", "left": "Jaiko", "right": "B", "answer": 0 },
+        { "id": "r6", "left": "Conan", "right": "D", "answer": 0 }
+      ]
+    },
     {
       "kind": "intro",
-      "title": "Phân loại nhân vật",
-      "body": "Cho danh sách 17 nhân vật. Hãy phân loại từng nhân vật vào 4 nhóm A, B, C, D. Lưu ý: Có những nhân vật không thuộc nhóm nào, hãy cân nhắc kỹ trước khi kéo.",
+      "title": "Bài tập số chính phương",
+      "body": "Cho A = { n ∈ ℕ | n là số chính phương, 2 < n < 50 }."
+    },
+    {
+      "kind": "pick-symbol",
+      "prompt": "Điền ∈ hoặc ∉ vào chỗ trống.",
+      "options": ["∈", "∉"],
+      "rows": [
+        { "id": "n4", "left": "4", "right": "A", "answer": 0, "explain": "4 = 2² và 2 < 4 < 50." },
+        { "id": "n15", "left": "15", "right": "A", "answer": 1, "explain": "15 không phải số chính phương." },
+        { "id": "n36", "left": "36", "right": "A", "answer": 0, "explain": "36 = 6²." },
+        { "id": "n100", "left": "100", "right": "A", "answer": 1, "explain": "100 không nhỏ hơn 50." }
+      ]
+    },
+    {
+      "kind": "free-answer",
+      "prompt": "Viết tập hợp A bằng cách liệt kê các phần tử. Sau đó cho biết n(A) = ?",
+      "fields": [
+        { "key": "A", "label": "A = { … }", "answers": [[4, 9, 16, 25, 36, 49]], "placeholder": "vd: 4, 9, 16, 25, 36, 49" },
+        { "key": "nA", "label": "n(A) = ?", "answers": [[6]], "single": true, "placeholder": "vd: 6" }
+      ]
+    },
+    {
+      "kind": "theory",
+      "title": "Chú ý — Tập rỗng",
+      "body": "Tập hợp không chứa phần tử nào được gọi là tập rỗng, kí hiệu ∅.",
       "bullets": [
-        "A: Nhân vật phim Conan.",
-        "B: Nhân vật phim Doraemon.",
-        "C: Nhân vật nữ.",
-        "D: Nhân vật đeo kính."
-      ]
-    },
-    {
-      "kind": "classify",
-      "prompt": "Kéo từng nhân vật vào TẤT CẢ các nhóm mà nhân vật đó thuộc về.",
-      "buckets": [
-        { "id": "A", "label": "A · Phim Conan" },
-        { "id": "B", "label": "B · Phim Doraemon" },
-        { "id": "C", "label": "C · Nữ" },
-        { "id": "D", "label": "D · Đeo kính" }
-      ],
-      "items": [
-        { "id": "suneo", "text": "Suneo", "targets": ["B"] },
-        { "id": "conan", "text": "Conan", "targets": ["A", "D"] },
-        { "id": "jaiko", "text": "Jaiko", "targets": ["B", "C"] },
-        { "id": "jennie", "text": "Jennie", "targets": ["C"] },
-        { "id": "shizuka", "text": "Shizuka", "targets": ["B", "C"] },
-        { "id": "mori", "text": "Mori", "targets": ["A"] },
-        { "id": "nobita", "text": "Nobita", "targets": ["B", "D"] },
-        { "id": "bloom", "text": "Bloom", "targets": ["C"] },
-        { "id": "phung-khanh-linh", "text": "Phùng Khánh Linh", "targets": ["C"] },
-        { "id": "doraemon", "text": "Doraemon", "targets": ["B"] },
-        { "id": "hattori", "text": "Hattori", "targets": ["A"] },
-        { "id": "hoa-hau-thanh-thuy", "text": "Hoa hậu Thanh Thuỷ", "targets": ["C"] },
-        { "id": "ran", "text": "Ran", "targets": ["A", "C"] },
-        /* 4 nhân vật không thuộc nhóm nào nhưng vẫn để targets: [] để kéo được */
-        { "id": "ronaldo", "text": "Ronaldo", "targets": [] },
-        { "id": "songoku", "text": "Songoku", "targets": [] },
-        { "id": "shinosuke", "text": "Shinosuke", "targets": [] },
-        { "id": "martin", "text": "Martin", "targets": [] }
-      ]
-    },
-    {
-      "kind": "true-false",
-      "prompt": "Đúng hay Sai? Trả lời mệnh đề sau.",
-      "statements": [
-        { 
-          "id": "s6", 
-          "text": "Có đúng 4 nhân vật không thuộc tập hợp nào (A, B, C, D) trong danh sách trên.", 
-          "answer": true, 
-          "explain": "Đúng — Ronaldo, Songoku, Martin và Shinosuke không thỏa mãn điều kiện của nhóm nào." 
-        }
+        "Tập hợp các nghiệm của phương trình x² + 1 = 0 là tập rỗng.",
+        "Tập hợp những người sống trên Mặt Trời là tập rỗng."
       ]
     }
   ]
