@@ -41,7 +41,6 @@ export function LessonRunner({ lessonId, onExit }: Props) {
   const [stepIndex, setStepIndex] = useState(0);
   const [, setDoneSteps] = useState<Set<number>>(new Set());
   const [finished, setFinished] = useState(false);
-  const step = lesson.steps[stepIndex];
   const isLast = stepIndex === lesson.steps.length - 1;
 
   function complete() {
@@ -122,19 +121,19 @@ export function LessonRunner({ lessonId, onExit }: Props) {
           </div>
         )}
 
-        {!finished && (
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={stepIndex}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25 }}
+        {/* Render all steps but only show the active one. This keeps each
+            step's local state alive when the student clicks "Quay lại" —
+            answers, placements and submitted status are preserved. */}
+        {!finished &&
+          lesson.steps.map((s, i) => (
+            <div
+              key={i}
+              className={i === stepIndex ? "block" : "hidden"}
+              aria-hidden={i !== stepIndex}
             >
-              <StepView step={step} onComplete={complete} />
-            </motion.div>
-          </AnimatePresence>
-        )}
+              <StepView step={s} onComplete={complete} />
+            </div>
+          ))}
 
         {finished && <FinishedCard lesson={lesson} onExit={onExit} />}
       </main>
