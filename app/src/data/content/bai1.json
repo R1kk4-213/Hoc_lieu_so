@@ -6,22 +6,22 @@
     {
       "kind": "intro",
       "title": "Phân loại nhân vật",
-      "body": "Cho danh sách 17 nhân vật từ phim, đời thực và nhân vật khác. Hãy phân loại từng nhân vật vào 4 nhóm A, B, C, D dưới đây.",
+      "body": "Cho danh sách 17 nhân vật. Hãy phân loại từng nhân vật vào 4 nhóm A, B, C, D. Lưu ý: Có những nhân vật không thuộc nhóm nào, hãy cân nhắc kỹ trước khi kéo.",
       "bullets": [
-        "A là tập hợp các nhân vật phim Conan.",
-        "B là tập hợp các nhân vật phim Doraemon.",
-        "C là tập hợp các nhân vật nữ.",
-        "D là tập hợp nhân vật đeo kính."
+        "A: Nhân vật phim Conan.",
+        "B: Nhân vật phim Doraemon.",
+        "C: Nhân vật nữ.",
+        "D: Nhân vật đeo kính."
       ]
     },
     {
       "kind": "classify",
       "prompt": "Kéo từng nhân vật vào TẤT CẢ các nhóm mà nhân vật đó thuộc về.",
       "buckets": [
-        { "id": "A", "label": "A · Phim Conan", "description": "Nhân vật trong phim Thám tử lừng danh Conan." },
-        { "id": "B", "label": "B · Phim Doraemon", "description": "Nhân vật trong phim Doraemon." },
-        { "id": "C", "label": "C · Nữ", "description": "Nhân vật nữ." },
-        { "id": "D", "label": "D · Đeo kính", "description": "Nhân vật đeo kính." }
+        { "id": "A", "label": "A · Phim Conan" },
+        { "id": "B", "label": "B · Phim Doraemon" },
+        { "id": "C", "label": "C · Nữ" },
+        { "id": "D", "label": "D · Đeo kính" }
       ],
       "items": [
         { "id": "suneo", "text": "Suneo", "targets": ["B"] },
@@ -29,30 +29,31 @@
         { "id": "jaiko", "text": "Jaiko", "targets": ["B", "C"] },
         { "id": "jennie", "text": "Jennie", "targets": ["C"] },
         { "id": "shizuka", "text": "Shizuka", "targets": ["B", "C"] },
-        { "id": "ronaldo", "text": "Ronaldo", "targets": [] },
         { "id": "mori", "text": "Mori", "targets": ["A"] },
         { "id": "nobita", "text": "Nobita", "targets": ["B", "D"] },
         { "id": "bloom", "text": "Bloom", "targets": ["C"] },
         { "id": "phung-khanh-linh", "text": "Phùng Khánh Linh", "targets": ["C"] },
         { "id": "doraemon", "text": "Doraemon", "targets": ["B"] },
         { "id": "hattori", "text": "Hattori", "targets": ["A"] },
-        { "id": "songoku", "text": "Songoku", "targets": [] },
         { "id": "hoa-hau-thanh-thuy", "text": "Hoa hậu Thanh Thuỷ", "targets": ["C"] },
         { "id": "ran", "text": "Ran", "targets": ["A", "C"] },
+        /* 4 nhân vật không thuộc nhóm nào nhưng vẫn để targets: [] để kéo được */
+        { "id": "ronaldo", "text": "Ronaldo", "targets": [] },
+        { "id": "songoku", "text": "Songoku", "targets": [] },
         { "id": "shinosuke", "text": "Shinosuke", "targets": [] },
         { "id": "martin", "text": "Martin", "targets": [] }
       ]
     },
     {
       "kind": "true-false",
-      "prompt": "Đúng hay Sai? Trả lời 6 mệnh đề sau.",
+      "prompt": "Đúng hay Sai? Trả lời mệnh đề sau.",
       "statements": [
-        { "id": "s1", "text": "Jennie là phần tử của tập hợp A.", "answer": false, "explain": "Sai — Jennie không phải nhân vật trong phim Conan." },
-        { "id": "s2", "text": "Ran không là phần tử của tập hợp B.", "answer": true, "explain": "Đúng — Ran có trong phim Conan, không có trong Doraemon." },
-        { "id": "s3", "text": "Songoku là phần tử của tập hợp C.", "answer": false, "explain": "Sai — Songoku là nhân vật nam." },
-        { "id": "s4", "text": "Phùng Khánh Linh là phần tử của ít nhất một trong ba tập hợp A, B, C.", "answer": true, "explain": "Đúng — Phùng Khánh Linh là ca sĩ nữ, thuộc tập hợp C." },
-        { "id": "s5", "text": "Hattori là phần tử của hai tập hợp A và C.", "answer": false, "explain": "Sai — Hattori là nhân vật nam trong phim Conan, không thuộc C." },
-        { "id": "s6", "text": "Có 4 nhân vật không thuộc tập hợp nào ở trên.", "answer": true, "explain": "Đúng — Có 4 nhân vật không thuộc A, B, C, D: Ronaldo, Songoku, Martin, Shinosuke." }
+        { 
+          "id": "s6", 
+          "text": "Có đúng 4 nhân vật không thuộc tập hợp nào (A, B, C, D) trong danh sách trên.", 
+          "answer": true, 
+          "explain": "Đúng — Ronaldo, Songoku, Martin và Shinosuke không thỏa mãn điều kiện của nhóm nào." 
+        }
       ]
     }
   ]
