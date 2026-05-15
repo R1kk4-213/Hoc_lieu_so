@@ -144,7 +144,7 @@
       "title": "Chú ý — Tập rỗng",
       "body": "Tập hợp không chứa phần tử nào được gọi là tập rỗng, kí hiệu ∅.",
       "bullets": [
-        "Tập hợp các nghiệm của phương trình x² + 1 = 0 là tập rỗng.",
+        "Tập hợp các nghiệm thực của phương trình x² + 1 = 0 là tập rỗng.",
         "Tập hợp những người sống trên Mặt Trời là tập rỗng."
       ]
     }
