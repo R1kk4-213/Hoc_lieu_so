@@ -45,7 +45,13 @@
     },
     {
       "kind": "true-false",
-      "prompt": "Đúng hay Sai? Trả lời 6 mệnh đề sau.",
+      "prompt": "Đúng hay Sai? Trả lời 6 mệnh đề sau, với",
+      "bullets": [
+        "A là tập hợp các nhân vật phim Conan.",
+        "B là tập hợp các nhân vật phim Doraemon.",
+        "C là tập hợp các nhân vật nữ.",
+        "D là tập hợp nhân vật đeo kính."
+      ],
       "statements": [
         { "id": "s1", "text": "Jennie là phần tử của tập hợp A.", "answer": false, "explain": "Sai — Jennie không phải nhân vật trong phim Conan." },
 { "id": "s2", "text": "Ran không là phần tử của tập hợp B.", "answer": true, "explain": "Đúng — Ran có trong phim Conan, không có trong Doraemon." },
@@ -69,7 +75,13 @@
     },
     {
       "kind": "free-answer",
-      "prompt": "Tập hợp A có bao nhiêu phần tử? Tập hợp C có bao nhiêu phần tử?",
+      "prompt": "Tập hợp A có bao nhiêu phần tử? Tập hợp C có bao nhiêu phần tử, với",
+      "bullets": [
+        "A là tập hợp các nhân vật phim Conan.",
+        "B là tập hợp các nhân vật phim Doraemon.",
+        "C là tập hợp các nhân vật nữ.",
+        "D là tập hợp nhân vật đeo kính."
+      ],
       "fields": [
         { "key": "nA", "label": "n(A) = ?", "answers": [[4]], "single": true, "placeholder": "vd: 4" },
         { "key": "nC", "label": "n(C) = ?", "answers": [[7]], "single": true, "placeholder": "vd: 7" }
@@ -87,7 +99,13 @@
     },
     {
       "kind": "pick-symbol",
-      "prompt": "Điền kí hiệu ∈ hoặc ∉ vào chỗ trống. (A: Conan · B: Doraemon · C: Nữ · D: Đeo kính)",
+      "prompt": "Điền kí hiệu ∈ hoặc ∉ vào chỗ trống. (A: Conan · B: Doraemon · C: Nữ · D: Đeo kính), với",
+      "bullets": [
+        "A là tập hợp các nhân vật phim Conan.",
+        "B là tập hợp các nhân vật phim Doraemon.",
+        "C là tập hợp các nhân vật nữ.",
+        "D là tập hợp nhân vật đeo kính."
+      ],
       "options": ["∈", "∉"],
       "rows": [
         { "id": "r1", "left": "Ran", "right": "B", "answer": 1 },
@@ -105,7 +123,7 @@
     },
     {
       "kind": "pick-symbol",
-      "prompt": "Điền ∈ hoặc ∉ vào chỗ trống.",
+      "prompt": "Điền ∈ hoặc ∉ vào chỗ trống, với A = { n ∈ ℕ | n là số chính phương, 2 < n < 50 }.",
       "options": ["∈", "∉"],
       "rows": [
         { "id": "n4", "left": "4", "right": "A", "answer": 0, "explain": "4 = 2² và 2 < 4 < 50." },
