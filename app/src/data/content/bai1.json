@@ -76,11 +76,10 @@
     {
       "kind": "free-answer",
       "prompt": "Tập hợp A có bao nhiêu phần tử? Tập hợp C có bao nhiêu phần tử, với",
-      "bullets": [
-        "A là tập hợp các nhân vật phim Conan.",
-        "B là tập hợp các nhân vật phim Doraemon.",
-        "C là tập hợp các nhân vật nữ.",
-        "D là tập hợp nhân vật đeo kính."
+      "prompt":  "A là tập hợp các nhân vật phim Conan.",
+      "prompt":  "B là tập hợp các nhân vật phim Doraemon.",
+      "prompt":  "C là tập hợp các nhân vật nữ.",
+      "prompt":  "D là tập hợp nhân vật đeo kính."
       ],
       "fields": [
         { "key": "nA", "label": "n(A) = ?", "answers": [[4]], "single": true, "placeholder": "vd: 4" },
